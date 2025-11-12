@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>タイルマップ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <script src="script.js"></script>
+
+    <!-- フォント -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <header class="header">
+            <div class="header-image-wrapper">
+                <img src="img/やってみようヘッダー.png" alt="猫目線の景色" class="header-image">
+            </div>
+                <h1 class="title">ネコになりきってみる</h1>
+                <p class="subtitle">いつもの部屋は、きみにどう見えている?</p>
+
+            </header>
+
+            <!-- 導入情報 -->
+             <div class="intro-wrap">
+             <div class="intro-card">
+                 <p class="intro-text">
+                    ネコは私たち人間と、見える色や目線が大きく違います。<br>
+                    ネコ目線で、いつもの景色がどう変わるか見てみましょう!
+                </p>
+             </div>
+             </div>
+
+             <div>
+                <h2 class="action-title">ネコが見ている景色ってどんな感じ？</h2>
+
+                <div class="info-grid"> 
+        
+                        <div class="info-item-card card-orange">
+                            <h3 class="card-title">目線がひくい!</h3>
+                            <div class="card-image-placeholder"></div>
+                            <p class="card-desc">
+                            猫の目線の高さは30cmほど！イスや机の脚やが目の前にあるかも
+                        </p>
+                    </div>
+        
+                     <div class="info-item-card card-cyan">
+                            <h3 class="card-title">見える色がちがう!</h3>
+                            <div class="card-image-placeholder"></div>
+                            <p class="card-desc">
+                            ネコは赤色が茶色っぽく見えてるみたい。りんごなど赤いものはどう見えているかな？
+                             </p>
+                            </div>
+        
+                    <div class="info-item-card card-gray">
+                        <h3 class="card-title">明るさがカギ!</h3>
+                    <div class="card-image-placeholder"></div>
+                        <p class="card-desc">
+                            色で判別できないぶん、明るいか・暗いかが大切！
+                        </p>
+                     </div>
+
+                </div>
+
+     <div class="try">
+
+        <div class="try-text-content">
+            <h2 class="action-title">やってみよう!</h2>
+            <p class="text-line-1">
+                ネコ目線で周りのものを見てみよう！どんな風になっているかな？<br>
+                下のワークシートにそって考えてみよう！
+            </p>
+        </div>
+        <!-- <img src="../img/top猫.png" alt="左上のイラスト" class="try-img top-left">
+        <img src="../img/top猫.png" alt="右上のイラスト" class="try-img top-right"> -->
+        <img src="../img/top猫.png" alt="左下のイラスト" class="try-img bottom-left">
+        <img src="../img/top猫.png" alt="右下のイラスト" class="try-img bottom-right">
+
+    </div>
+                
+    </div>
+
+    <!-- 仮 -->
+
+     <!-- 仮 -->
+
+</div>
+            <!-- <div class="intro-card">
+                <p class="intro-text">
+                    ネコは私たち人間と、見える色や目線が大きく違います。ネコ目線で、いつもの景色がどう変わるか見てみましょう!
+                </p>
+                <div class="info-grid">
+                    <h3 class="info-title">
+                        <span class="paw-icon">🐾</span> ネコの世界
+                    </h3>
+                    <p class="info-item">
+                        <strong>目線がひくい!</strong><br>
+                        → 床のすぐ上から世界を見ているよ。イスの脚や机がとっても大きく見える!
+                    </p>
+                    <p class="info-item">
+                        <strong>見える色がちがう!</strong><br>
+                        → ネコは「青」と「黄色」がよく見えるけど、赤は見えないんだ。だから赤いおもちゃも、ネコには「茶色っぽく」見えているかも。
+                    </p>
+                    <p class="info-item">
+                        <strong>明るさがカギ!</strong><br>
+                        → ネコは「何色か」よりも、「明るいか・暗いか」で世界を見ているよ。
+                    </p>
+                </div>
+                <h2 class="action-title">やってみよう!</h2>
+            </div> -->
+
+            <!-- タブボタン -->
+            <div class="tab-buttons">
+                <button id="worksheetTab" class="tab-btn active">ワークシート・おえかき</button>
+                <button id="galleryTab" class="tab-btn">
+                    ギャラリー (<span id="galleryCount">0</span>)
+                </button>
+            </div>
+
+            <!-- ワークシートビュー -->
+            <div id="worksheetView" class="view active">
+                <div class="card">
+                    <h2 class="section-title">ワークシートに書きこもう</h2>
+                    
+                    <!-- 名前入力 -->
+                    <div class="name-section">
+                        <label for="worksheetName" class="label">なまえ(ニックネームでもOK!)</label>
+                        <input type="text" id="worksheetName" class="input-name" placeholder="なまえを入力してね" maxlength="20">
+                    </div>
+
+                    <!-- セクション1 -->
+                    <div class="section section-orange">
+                        <h3 class="section-heading">① ネコになってみよう!</h3>
+                        <p class="section-desc">ネコの目線になったら、周りのものがどう見えるか想像して書き出してみよう。</p>
+                        <div class="grid-2">
+                            <div class="form-group">
+                                <label for="closest" class="label">いちばん近くに見えるものは?</label>
+                                <input type="text" id="closest" class="input-text" placeholder="例:床のホコリ、イスの足、毛布のフチ" maxlength="120">
+                            </div>
+                            <div class="form-group">
+                                <label for="furthest" class="label">いちばん遠くに見えるものは?</label>
+                                <input type="text" id="furthest" class="input-text" placeholder="例:遠くの窓、部屋のすみ" maxlength="120">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- セクション2 -->
+                    <div class="section section-cyan">
+                        <h3 class="section-heading">② ネコの世界はどう見える?</h3>
+                        <p class="section-desc">ネコの見え方の特徴(くすんだ赤、青・黄がよく見える、明るさに敏感)を想像して書いてみよう。</p>
+                        <div class="form-group">
+                            <label for="redBall" class="label">赤いボール</label>
+                            <input type="text" id="redBall" class="input-text" placeholder="色、大きさ、動き" maxlength="120">
+                        </div>
+                        <div class="form-group">
+                            <label for="curtain" class="label">カーテン</label>
+                            <input type="text" id="curtain" class="input-text" placeholder="色、大きさ、動き" maxlength="120">
+                        </div>
+                        <div class="form-group">
+                            <label for="sunlight" class="label">太陽の光</label>
+                            <input type="text" id="sunlight" class="input-text" placeholder="明るさ、見え方" maxlength="120">
+                        </div>
+                        <div class="form-group">
+                            <label for="owner" class="label">飼い主(人)</label>
+                            <input type="text" id="owner" class="input-text" placeholder="大きさ、動き" maxlength="120">
+                        </div>
+                        <div class="form-group">
+                            <label for="hidingSpot" class="label">かくれる場所</label>
+                            <input type="text" id="hidingSpot" class="input-text" placeholder="どんな場所が好きそうか" maxlength="120">
+                        </div>
+                    </div>
+
+                    <!-- セクション3: お絵かき -->
+                    <div class="section section-orange">
+                        <h3 class="section-heading">✏️ ③ ネコの世界を描いてみよう!</h3>
+                        <p class="section-desc">ネコの目線で見た、自分の部屋や教室の絵をかいてみよう。</p>
+                        
+                        <div class="hint-box">
+                            <p class="hint-text">
+                                <strong>💡 ヒント:</strong><br>
+                                ① 低い目線でかこう!<br>
+                                ② 青、黄、ちゃいろを中心にかいてみよう!<br>
+                                ③ 明るい場所と暗い場所の差を大きくつけてみよう!
+                            </p>
+                        </div>
+
+                        <div class="color-section">
+                            <p class="color-label">色をえらぼう</p>
+                            <div class="color-palette" id="colorPalette"></div>
+                        </div>
+
+                        <canvas id="drawingCanvas" class="canvas"></canvas>
+                        <p class="canvas-hint">指やマウスでキャンバスに絵をかこう</p>
+
+                        <div class="button-group">
+                            <button id="saveBtn" class="btn btn-primary">ギャラリーにほぞん</button>
+                            <button id="resetCanvasBtn" class="btn btn-gray">キャンバスをリセット</button>
+                        </div>
+                    </div>
+
+                    <!-- セクション4 -->
+                    <div class="section section-cyan">
+                        <h3 class="section-heading">④ ネコの目になって気づいたこと</h3>
+                        <p class="section-desc">ネコになった気分で世界を見たら、どんなことを感じたかまとめてみよう。</p>
+                        
+                        <div class="form-group">
+                            <label for="surprised" class="label">おどろいたこと (300文字まで):</label>
+                            <textarea id="surprised" class="textarea" placeholder="例:ゆかの上はホコリだらけだった、物がとても大きく見えた" rows="2" maxlength="300"></textarea>
+                            <div class="char-count"><span id="surprisedCount">0</span> / 300 文字</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="likedPlace" class="label">すきだなと思った場所 (300文字まで):</label>
+                            <textarea id="likedPlace" class="textarea" placeholder="例:ひなたのあたたかい場所、イスの下のくらい場所" rows="2" maxlength="300"></textarea>
+                            <div class="char-count"><span id="likedPlaceCount">0</span> / 300 文字</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="wish" class="label">もしほんとうにネコだったら何をしてみたい? (300文字まで):</label>
+                            <textarea id="wish" class="textarea" placeholder="例:高いところに登ってみたい、ひもで遊びたい" rows="2" maxlength="300"></textarea>
+                            <div class="char-count"><span id="wishCount">0</span> / 300 文字</div>
+                        </div>
+                    </div>
+
+                    <!-- フッターボタン -->
+                    <div class="footer-buttons">
+                        <button id="downloadBtn" class="btn btn-cyan">ワークシートPNGダウンロード</button>
+                        <button id="resetAllBtn" class="btn btn-gray">ぜんぶリセット</button>
+                    </div>
+                </div>
+
+                <div class="footer-note">
+                    <p>🐾 ネコになった気分で、たのしく記入できたかな?</p>
+                    <p>お家の人や友だちと、お互いのワークシートを見せ合ってみよう!</p>
+                </div>
+            </div>
+
+            <!-- ギャラリービュー -->
+            <div id="galleryView" class="view">
+                <div class="card">
+                    <h2 class="gallery-title">みんなのさくひんギャラリー</h2>
+                    <div id="galleryGrid" class="gallery-grid">
+                        <div class="empty-gallery">
+                            <p class="empty-icon"></p>
+                            <p class="empty-text">まださくひんがありません</p>
+                            <p class="empty-hint">ワークシートを完成させて、ギャラリーにほぞんしてね!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- モーダル(通知) -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h3 id="modalTitle" class="modal-title"></h3>
+            <p id="modalMessage" class="modal-message"></p>
+            <div class="modal-footer">
+                <button id="modalOk" class="btn btn-primary">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- モーダル(確認) -->
+    <div id="confirmModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="confirmTitle" class="modal-title-warn"></h3>
+                <button id="confirmClose" class="close-btn">✕</button>
+            </div>
+            <p id="confirmMessage" class="modal-message"></p>
+            <div class="modal-footer">
+                <button id="confirmCancel" class="btn btn-secondary">キャンセル</button>
+                <button id="confirmOk" class="btn btn-danger">はい、実行します</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

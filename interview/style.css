@@ -1,0 +1,363 @@
+/* フォント */
+.zen-maru-gothic-regular {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.zen-maru-gothic-medium {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.zen-maru-gothic-bold {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+        
+        
+        
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+                font-family: "Zen Maru Gothic",'Arial', sans-serif;
+            line-height: 1.9;
+            color: #4a4a4a;
+            background: #fafaf8;
+            margin: 70px;
+            overflow-x: hidden;
+        }
+
+        /* トップ */
+.top-img {
+    
+    object-fit: cover;
+    width: 100%;
+    height: 30vw;
+    /* display: block; */
+    margin: 0 auto !important; /* !importantでリセットCSSを上書き */
+}
+        /* セクション */
+        .hero {
+            position: relative;
+            /* height: 75vh; */
+            /* background: linear-gradient(rgba(230, 215, 195, 0.3), rgba(230, 215, 195, 0.3)),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f4ebe0" width="1200" height="600"/></svg>'); */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            text-align: center;
+            /* padding: 0 20px; */
+            max-width: 800px;
+            
+        }
+
+        .hero-subtitle {
+            /* font-size: 13px; */
+            /* font-weight: 400; */
+            /* letter-spacing: 4px; */
+            margin-bottom: 25px;
+            color: #8b7355;
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            /* font-size: 42px; */
+            /* font-weight: 500; */
+            /* line-height: 1.6; */
+            margin-bottom: 30px;
+            color: #5a4a3a;
+            /* letter-spacing: 1px; */
+        }
+
+        .hero-description {
+            font-size: 16px;
+            font-weight: 300;
+            max-width: 650px;
+            margin: 0 auto;
+            color: #6a5a4a;
+            line-height: 2;
+        }
+
+        /* 目次セクション */
+        .table-of-contents {
+            background: #fff;
+            padding: 80px 20px;
+            border-top: 1px solid #e8e2d8;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .toc-title {
+            font-size: 24px;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #7a6a5a;
+            letter-spacing: 2px;
+        }
+
+        .toc-list {
+            background: #fafaf8;
+            padding: 40px 50px;
+            border-radius: 6px;
+            border: 1px solid #e8e2d8;
+        }
+
+        .toc-item {
+            padding: 18px 0;
+            border-bottom: 1px solid #e8e2d8;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .toc-item:last-child {
+            border-bottom: none;
+        }
+
+        .toc-item:hover {
+            color: #8b7355;
+            padding-left: 10px;
+        }
+
+        .toc-item-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: #5a4a3a;
+            line-height: 1.7;
+        }
+
+        /* 記事セクション */
+
+        .article-section {
+            padding: 80px 20px;
+            scroll-margin-top: 20px;
+        }
+
+        .article-section:nth-child(odd) {
+            background: #fff;
+        }
+
+        .article-section:nth-child(even) {
+            background: #fafaf8;
+        }
+
+        .article-header {
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+
+        .article-number {
+            font-size: 14px;
+            color: #b5a090;
+            font-weight: 500;
+            margin-bottom: 15px;
+            display: none;
+            font-family: Georgia, serif;
+        }
+
+        .article-title {
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #5a4a3a;
+            letter-spacing: 0.5px;
+        }
+
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .article-text {
+            font-size: 16px;
+            line-height: 2.1;
+            margin-bottom: 35px;
+            color: #4a4a4a;
+            text-indent: 1em;
+        }
+
+        .article-image {
+            width: 100%;
+            height: 450px;
+            background: linear-gradient(135deg, #e8e2d8 0%, #f4ebe0 100%);
+            border-radius: 4px;
+            margin: 50px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #b5a090;
+            font-size: 15px;
+            border: 1px solid #e8e2d8;
+        }
+
+        .quote-box {
+            background: #fff;
+            border-left: 3px solid #c4b4a0;
+            padding: 35px 40px;
+            margin: 50px 0;
+            border-radius: 2px;
+        }
+
+        .quote-text {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 2;
+            color: #5a4a3a;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .quote-text::before {
+            content: '"';
+            position: absolute;
+            left: 0;
+            top: -5px;
+            font-size: 40px;
+            color: #c4b4a0;
+            font-family: Georgia, serif;
+        }
+        .article-text-Q{
+            font-weight:500;
+        }
+
+        /* プロフィールセクション */
+        .profile-section {
+            background: #f4ebe0;
+            padding: 80px 20px;
+            border-top: 1px solid #e8e2d8;
+        }
+
+        .profile-container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 45px;
+            align-items: start;
+        }
+
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            background: #e8e2d8;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            color: #8b7a6a;
+            border: 3px solid #fff;
+        }
+
+        .profile-info {
+        }
+
+        .profile-label {
+            font-size: 12px;
+            color: #8b7a6a;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .profile-name {
+            font-size: 26px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #5a4a3a;
+        }
+
+        .profile-role {
+            font-size: 15px;
+            color: #7a6a5a;
+            margin-bottom: 20px;
+        }
+
+        .profile-company {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 30px;
+            color: #6a5a4a;
+        }
+
+        .profile-description {
+            font-size: 15px;
+            line-height: 2;
+            color: #5a4a4a;
+        }
+
+        /* セパレーター */
+        .separator {
+            width: 60px;
+            height: 2px;
+            background: #c4b4a0;
+            margin: 60px auto;
+        }
+
+        /* レスポンシブ */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 30px;
+            }
+
+            .hero-description {
+                font-size: 15px;
+            }
+
+            .article-title {
+                font-size: 26px;
+            }
+
+            .profile-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 30px;
+            }
+
+            .profile-image {
+                margin: 0 auto;
+            }
+
+            .toc-list {
+                padding: 30px 35px;
+            }
+
+            .toc-item {
+                padding: 15px 0;
+            }
+
+            .toc-item-title {
+                font-size: 14px;
+            }
+
+            .article-image {
+                height: 300px;
+            }
+        }
+
+        /* スムーズスクロール */
+        html {
+            scroll-behavior: smooth;
+        }
