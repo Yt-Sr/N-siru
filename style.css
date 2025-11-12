@@ -358,7 +358,7 @@ body {
     width: 420px; 
     height: 220px; 
     background-color: #ffffff; 
-    position: absolute; /* 
+    position: absolute; 
 }
 .type-15 { 
     left: 23%; 
@@ -374,7 +374,7 @@ body {
     width: 220px; 
     height: 220px; 
     background-color: #ffffff; 
-    position: absolute; /* 💥修正: relativeからabsoluteに変更 */
+    position: absolute; 
 }
 .type-17 { 
     left: 25%; 
@@ -382,7 +382,7 @@ body {
     width: 420px; 
     height: 220px; 
     background-color: #ffffff; 
-    position: absolute; /* 💥修正: position: relative; がなかったが、安全のためabsoluteを適用 */
+    position: absolute; 
 }
 .type-18 { 
     left: 90%; 
@@ -390,7 +390,7 @@ body {
     width: 220px; 
     height: 220px; 
     background-color: #ffffff; 
-    position: absolute; /* 💥修正: relativeからabsoluteに変更 */
+    position: absolute; 
 }
 
 .type-19 { 
@@ -399,7 +399,7 @@ body {
     width: 220px; 
     height: 220px; 
     background-color: #ffffff; 
-    position: absolute; /* 💥修正: relativeからabsoluteに変更 */
+    position: absolute; 
 }
 .type-20 { 
     left: 4%; 
@@ -407,7 +407,7 @@ body {
     width: 420px; 
     height: 220px; 
     background-color: #ffffff; 
-    position: absolute; /* 💥修正: relativeからabsoluteに変更 */
+    position: absolute; 
 }
 .type-21 { 
     left: 60%; 
@@ -415,7 +415,7 @@ body {
     width: 220px; 
     height: 220px; 
     background-color: #ffffff; 
-    position: absolute; /* 💥修正: position: relative; がなかったが、安全のためabsoluteを適用 */
+    position: absolute; 
 }
 .type-22 { 
     left: 10%; 
@@ -423,7 +423,7 @@ body {
     width: 420px; 
     height: 420px; 
     background-color: #ffffff; 
-    position: absolute; /* 💥修正: position: relative; がなかったが、安全のためabsoluteを適用 */
+    position: absolute;
 }
 .type-23 { 
     left: 60%; 
@@ -431,7 +431,7 @@ body {
     width: 420px; 
     height: 220px; 
     background-color: #ffffff; 
-    position: absolute; /* 💥修正: position: relative; がなかったが、安全のためabsoluteを適用 */
+    position: absolute;
 }
 .type-24 { 
     left: 75%; 
@@ -439,7 +439,7 @@ body {
     width: 220px; 
     height: 220px; 
     background-color: #ffffff; 
-    position: absolute; /* 💥修正: position: relative; がなかったが、安全のためabsoluteを適用 */
+    position: absolute; 
 }
 .type-25 { 
     left: 35%; 
@@ -447,7 +447,7 @@ body {
     width: 420px; 
     height: 220px; 
     background-color: #ffffff; 
-    position: absolute; /* 💥修正: position: relative; がなかったが、安全のためabsoluteを適用 */
+    position: absolute; 
 }
 .type-26 { 
     left: 50%; 
@@ -455,7 +455,7 @@ body {
     width: 420px; 
     height: 420px; 
     background-color: #ffffff; 
-    position: absolute; /* 💥修正: position: relative; がなかったが、安全のためabsoluteを適用 */
+    position: absolute;
 }
 .type-27 { 
     left: 15%; 
@@ -463,7 +463,7 @@ body {
     width: 220px; 
     height: 220px; 
     background-color: #ffffff; 
-    position: absolute; /* 💥修正: position: relative; がなかったが、安全のためabsoluteを適用 */
+    position: absolute; 
 }
 .type-28 { 
     left: 50%; 
@@ -471,7 +471,7 @@ body {
     width: 420px; 
     height: 220px; 
     background-color: #ffffff; 
-    position: absolute; /* 💥修正: position: relative; がなかったが、安全のためabsoluteを適用 */
+    position: absolute;
 }
 .type-29 { 
     left: 85%; 
@@ -479,7 +479,7 @@ body {
     width: 220px; 
     height: 220px; 
     background-color: #ffffff; 
-    position: absolute; /* 💥修正: position: relative; がなかったが、安全のためabsoluteを適用 */
+    position: absolute; 
 }
 .type-30 { 
     left: 75%; 
@@ -487,7 +487,7 @@ body {
     width: 420px; 
     height: 420px; 
     background-color: #ffffff; 
-    position: absolute; /* 💥修正: relativeからabsoluteに変更 */
+    position: absolute; 
 }
 
 
