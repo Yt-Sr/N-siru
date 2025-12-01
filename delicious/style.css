@@ -8,6 +8,7 @@
 
 
 
+
         body {
             background:rgb(245, 242, 237);
             font-family: 'Hiragino Kaku Gothic Pro', 'Meiryo', sans-serif;
@@ -47,6 +48,23 @@
             flex-shrink: 0;
         }
 
+
+        /* 左右寄せバリエーション */
+.panel-row.left {
+    justify-content: flex-start; /* 左寄せ */
+     padding-left: 9%; 
+}
+
+.panel-row.center {
+    justify-content: center; /* 中央寄せ（既存デフォルトと同じ） */
+     /* padding-right: 10%;  */
+}
+
+.panel-row.right {
+    justify-content: flex-end; /* 右寄せ */
+     padding-right: 9%; 
+}
+
         /* アスペクト比を維持するための設定 */
         .panel::after {
             content: '';
@@ -65,7 +83,7 @@
         }
 
         .panel-double {
-            width: 48%;
+            width: 45%;
             max-width: 400px;
         }
 
@@ -107,11 +125,12 @@
         }
 
         .text-box {
+            margin: 5%;
             background: white;
             border: 3px solid #000;
             padding: 20px 15px;
             box-shadow: 2px 2px 0px rgba(0,0,0,0.2);
-            font-size: clamp(10px, 1vw, 20px); 
+            font-size: clamp(14px, 1vw, 16px); 
             line-height: 1.8;
             opacity: 0;
             transform: scale(0.8);
@@ -125,14 +144,14 @@
 
         .text-box-top-left {
             position: absolute;
-            top: 20px;
+            /* top: 20px; */
             left: 20px;
             max-width: 45%;
         }
 
         .text-box-top-right {
             position: absolute;
-            top: 20px;
+            /* top: 20px; */
             right: 20px;
             max-width: 45%;
         }
@@ -147,7 +166,7 @@
         .text-box-bottom-right {
             position: absolute;
             bottom: 20px;
-            right: 20px;
+            right: 10px;
             max-width: 45%;
         }
 
@@ -236,8 +255,7 @@
 
         }
 
-
-        /* ボタン */
+                /* ボタン */
 
 /* 003 */
 
@@ -285,9 +303,3 @@
 .button003 a:hover:after {
     border-color: #FFF;
 }
-
-
-/* コマ表示 */
-/* style.css */
-
-
