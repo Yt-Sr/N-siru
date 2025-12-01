@@ -233,8 +233,7 @@
         }
 
         .panel_img2{
-            width: 35%; 
-            position: absolute;
+            width:  100%; 
             right: 10%;
             bottom: 0;
 
