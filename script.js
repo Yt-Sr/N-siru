@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 初期位置を中央
-    window.scrollTo(1000, 1100);
+    window.scrollTo(1500, 1500);
     updateMinimap();
 
     // キーボードショートカット（矢印キー＋WASD）
