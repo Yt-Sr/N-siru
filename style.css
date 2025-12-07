@@ -71,6 +71,40 @@ body {
     height: 100%;
     
 }
+/* 保護者の方へボタン */
+.button-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    margin:0 auto;
+    padding: .9em 2em;
+    border: none;
+    border-radius: 25px;
+    background-color: #219DDD;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1em;
+    font-family: "Zen Maru Gothic",'Arial', sans-serif;
+    transition: all  0.3s ease;
+    top: 41%;
+    left: 11%;
+    position: relative;
+
+    
+    
+}
+
+.button-2:hover {
+    background-color: #54bdf1;
+    transform: scale(1.05);
+}
+
+.button-2:after{
+
+ transition: 0.3s ease-in-out;    
+}
+
 
 
 /* ----- タイルそれぞれの基本スタイル ----- */
@@ -99,6 +133,7 @@ body {
 .tile:hover {
     transform: scale(1.1);
     box-shadow: 0 12px 40px #00B1B0;
+    z-index: 1;
 }
 
 .tile:active {
@@ -317,7 +352,7 @@ background-size: 10px 10px;
 
 .type-1{
     left: 23%;  /* Random % */
-    top: 80%;   /* Random % */
+    top: 70%;   /* Random % */
     width: 220px;
     height: 220px;
     background-color: #ffffff;
@@ -351,7 +386,7 @@ background-size: 10px 10px;
     position: absolute; 
 }
 .type-4{
-    left: 55%;
+    left: 58%;
     top: 80%;
     width: 320px;
     height: 320px;
@@ -622,15 +657,15 @@ background-size: 10px 10px;
 }
 
 .int_tile_image{            
-    width: 35%;
-    bottom:5%;
-    left: 60%;
+    width: 47%;
+    bottom:3%;
+    left: 50%;
     position: absolute;
 }
 
 .int_tile_image2{            
-    width: 35%;
-    bottom:10%;
+    width: 20%;
+    bottom:8%;
     left: 5%;
     position: absolute;
 }
@@ -662,7 +697,7 @@ background-size: 10px 10px;
     align-items: center;
     justify-content: center;
     z-index: 2000;
-
+    
 }
 
 
@@ -710,7 +745,7 @@ background-size: 10px 10px;
     text-align: center;
   font-weight:bold;
   border-bottom: dotted 3px #53535372;
-  margin: 0 auto 50px;
+  /* margin: 0 auto 50px; */
   padding: 0 0 5px 0;
 }
 
@@ -742,6 +777,7 @@ z-index: 2010;
 .close-btn:hover {
     opacity: 1;
 }
+
 
 
 /* ----- ミニマップ関連 ----- */
@@ -813,11 +849,12 @@ z-index: 2010;
     position: absolute;
     border-radius: 5%;
     opacity: 0.7;
+    z-index: 0;
 }
 
 .tile-image01{
     position: absolute;
-    top: 87%;
+    top: 83%;
     right: 67%;
     width: 9%;
     border-radius: 5%;
@@ -848,7 +885,7 @@ z-index: 2010;
 }
 .tile-image5{
     position: absolute;
-    top: 60%;
+    top: 66%;
     right:30%;
     width: 8%;
     border-radius: 8%;
@@ -1022,7 +1059,7 @@ z-index: 2010;
     width: 21%;
 }
 .tile-image37{
-    top: 90%;
+    top: 93%;
     right:24%;
     width: 11%;
 }

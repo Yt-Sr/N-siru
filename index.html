@@ -16,10 +16,6 @@
 </head>
 <body>
     
-
-
-    
-
     <div class="infinite-canvas" id="canvas">
         
 
@@ -46,19 +42,56 @@
         <div class="top"></div>
 
 
+        <!-- 保護者の方へボタン -->
+       <div class="tile type-hidden" 
+        id="parent-trigger-tile-container" 
+        style="display: none;">
+    
+        <div class="modal-content-hidden" id="parentModalWrapper">
+            <div id="parentModal" class="modal"> 
+                <div class="modal-content">
+                <button class="close-btn" onclick="closeModal()">×</button>
+                
+                <div class="m-n">
+                    <h3>保護者の方へ</h3>
+                    <img src="img/top猫.png" alt="保護者向け画像" class="tile-image"> 
+                    <p>この度は、教育サイト「ねこ博士と考える世界」にご関心をお持ちいただき、誠にありがとうございます。</p><br>
+                    
+                    <h4>サイトのコンセプト：「環世界と想像力」</h4>
+                    <p>当サイトは、「**猫が見ている世界を、人間の私たちが想像してみるというユニークなテーマを持つ学習エンターテインメントです。</p><br>
+                    <p>科学的な事実を元にした想像のヒント**を漫画で提示し、「自分ではない他の生き物」の視点に立つ楽しさ、すなわち**多様性を考えるきっかけ**をお子様に提供します。</p><br>
+                    <p>ぜひ、このサイトをお子様との対話のきっかけ**として、自由な発想を楽しんでください。</p><br>
+                    <p style="text-align: right; font-size: 0.9em;">ねこしるより</p>
+                </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <button class="button-2" onclick="
+    const customModal = document.getElementById('parentModal');
+    const modalWrapper = document.getElementById('parentModalWrapper');
+    
+    if (customModal && modalWrapper) {
+        document.body.appendChild(customModal);
+        customModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        customModal.dataset.originalParentId = 'parentModalWrapper';
+    }
+    ">保護者の方へ</button>
 
 
+<!-- 各タイル -->
         <div class="tile type-0" 
              data-link-type="external"
             data-url="https://yamato-sho.github.io/cat-world_-Graduation-work/たtime/index.html">
             <img src="img/時間.gif" alt="猫の時間" class="tile-image">
-            <div class="tile-title"><span class="title">0</div>
-            <div class="tile-desc"><span class="desc1">実はこう見えてる！？</span></div>
+            <div class="tile-title"><span class="title"></div>
+
         </div>
 
 
 
-        <div class="comment_box">
+        <div class="comment_box" >
             <p>画面を上下左右に動かして、気になるねこの世界をのぞいてみよう！</p>
         </div>
         
@@ -66,15 +99,15 @@
 
      <div class="tile type-1" 
             data-link-type="modal"> 
-            <img src="img/catvision.png" alt="猫の視覚" class="tile-image">
-                <div class="tile-title">ねこは液体？</div>
+            <img src="img/豆知識.png" alt="猫の視覚" class="tile-image">
+                <div class="tile-title"></div>
                 <div class="modal-content-hidden">
                 <div id="catVisionModal" class="modal"> 
                 <div class="modal-content">
                     <button class="close-btn">&times;</button>
                         <div class="m-n">
                         <h3>ねこは液体？</h3>
-                        <img src="img/top猫.png" alt="猫の視覚" class="tile-image">
+                        <img src="img/液体.png" alt="猫の視覚" class="tile-image">
                         <p>ねこは液体。なんて聞いたことはありますか？箱に入ると体がピッタリ収まり、体が液体のように自由に変形することから言われています。</p><br>
                         <p>なぜそんなに自由に動くのか、その秘密は「骨の数」にあるのです。</p><br>
                         <p>人間には約 200個の骨がありますが、ねこは約140個の骨があります！人よりも小さな体で多くの骨を持っているんですね。そのおかげで体がたくさん曲がるようになっています。</p><br>
@@ -105,21 +138,19 @@
              data-link-type="external"
             data-url="https://yamato-sho.github.io/cat-world_-Graduation-work/みwater/index.html">
             <img src="img/水.gif" alt="猫の視覚" class="tile-image">
-            <div class="tile-title">4</div>
-            <div class="tile-desc">テキスト</div>
+            <div class="tile-title"></div>
         </div>
 
 
         <div class="tile type-5" data-link-type="external"
             data-url="https://yamato-sho.github.io/cat-world_-Graduation-work/さsound/index.html">
             <img src="img/音.gif" alt="猫の視覚" class="tile-image">
-            <div class="tile-title">5</div>
-            <div class="tile-desc">テキスト</div>
+            <div class="tile-title"></div>
         </div>
 
         <div class="tile type-6" 
              data-link-type="external"
-            data-url="try/index.html">
+            data-url="https://yamato-sho.github.io/cat-world_-Graduation-work/try/index.html">
             <img src="img/やってみよう.png" alt="やってみよう" class="tile-image">
 
         </div>
@@ -154,8 +185,8 @@
 
 <div class="tile type-10" 
      data-link-type="modal"> 
-    <img src="img/catvision.png" alt="猫の視覚" class="tile-image">
-    <div class="tile-title">キラッと光る目のヒミツ</div>
+    <img src="img/豆知識.png" alt="猫の視覚" class="tile-image">
+    <div class="tile-title"></div>
 
     <div class="modal-content-hidden">
         
@@ -166,7 +197,7 @@
             <button class="close-btn">&times;</button>
                 <div class="m-n">
                 <h3>キラッと光る目のヒミツ</h3>
-                 <img src="img/top猫.png" alt="猫の視覚" class="tile-image">
+                 <img src="img/目.png" alt="猫の視覚" class="tile-image">
                 <p>ねこの目が、夜中にキラッと光るのを見たことはありませんか？</p><br>
                 <p>あれは、暗いところでもよく見えるように目が機能しているからなんです。</p><br>
                 <p>人間が「明るい！」と感じる光の量と比べて、ネコちゃんはたった 6分の1の光でも、十分ものを見ることができます。</p><br>
@@ -182,12 +213,12 @@
          <div class="tile type-11" 
              data-link-type="external"
             data-url="https://yamato-sho.github.io/cat-world_-Graduation-work/interview/index.html">
-            <img src="img/interview_cat.png" alt="猫の視覚" class="int_tile_image">
-            <img src="img/ものづくり_文字.png" alt="猫の視覚" class="int_tile_image2">
+            <img src="img/インタビュー.png" alt="猫の視覚" class="int_tile_image">
+            <img src="img/保護者向け.png" alt="猫の視覚" class="int_tile_image2">
             <img src="img/nekozuki_top.jpg" alt="猫の視覚" class="int_tile_image3">
-            <div class="tile-title">イ</div>
-            <div class="tile-desc">テキスト</div>
+            <div class="tile-title"></div>
         </div>
+        
         
         <!-- <div class="tile type-12" 
             data-link-type="external"
@@ -208,16 +239,14 @@
             data-link-type="external"
             data-url="https://yamato-sho.github.io/cat-world_-Graduation-work/たothers/index.html">
             <img src="img/他者.gif" alt="猫の視覚" class="tile-image">
-            <div class="tile-title">14</div>
-            <div class="tile-desc">テキスト</div>
+            <div class="tile-title"></div>
         </div>
 
         <div class="tile type-15" 
             data-link-type="external"
             data-url="https://yamato-sho.github.io/cat-world_-Graduation-work/むmoody/index.html">
             <img src="img/気分.gif" alt="猫の視覚" class="tile-image">
-            <div class="tile-title">15</div>
-            <div class="tile-desc">テキスト</div>
+            <div class="tile-title"></div>
         </div>
         
         <!-- <div class="tile type-16" 
@@ -250,15 +279,15 @@
 
      <div class="tile type-20" 
             data-link-type="modal"> 
-            <img src="img/catvision.png" alt="猫の視覚" class="tile-image">
-                <div class="tile-title">足音で誰かわかる！？猫の耳のヒミツ</div>
+            <img src="img/豆知識.png" alt="猫の視覚" class="tile-image">
+                <div class="tile-title"></div>
                 <div class="modal-content-hidden">
                 <div id="catVisionModal" class="modal"> 
                 <div class="modal-content">
                     <button class="close-btn">&times;</button>
                         <div class="m-n">
                         <h3>足音で誰かわかる！？猫の耳のヒミツ</h3>
-                        <img src="img/top猫.png" alt="猫の視覚" class="tile-image">
+                        <img src="img/足音.png" alt="猫の視覚" class="tile-image">
                         <p>ねこは人間が聞ける音の高さ（周波数）と比べて、３倍以上も高い音まで聞くことができます。</p><br>
                         <p>普段聞いている家族の歩く速さや足のつき方のわずかな違いを、音で聞き分けていると考えられています。</p>
                         <p>誰かを見なくても足音でわかってしまうなんて、とても鋭い感覚なんですね！</p>
@@ -281,8 +310,7 @@
             data-link-type="external"
             data-url="https://yamato-sho.github.io/cat-world_-Graduation-work/delicious/index.html">
             <img src="img/おいしい.gif" alt="猫の視覚" class="tile-image">
-            <div class="tile-title">22</div>
-            <div class="tile-desc">テキスト</div>
+            <div class="tile-title"></div>
         </div>
         
         <!-- <div class="tile type-23" 
@@ -297,24 +325,21 @@
              data-link-type="external"
             data-url="https://yamato-sho.github.io/cat-world_-Graduation-work/mirror/index.html">
             <img src="img/鏡.gif" alt="猫の視覚" class="tile-image">
-            <div class="tile-title">24</div>
-            <div class="tile-desc">テキスト</div>
+            <!-- <div class="tile-title">24</div> -->
         </div>
 
         <div class="tile type-25" 
             data-link-type="external"
             data-url="https://yamato-sho.github.io/cat-world_-Graduation-work/こcommunication/index.html">
             <img src="img/コミュニケーション.gif" alt="猫の視覚" class="tile-image">
-            <div class="tile-title">25</div>
-            <div class="tile-desc">テキスト</div>
+            <div class="tile-title"></div>
         </div>
 
         <div class="tile type-26" 
             data-link-type="external"
             data-url="https://yamato-sho.github.io/cat-world_-Graduation-work/ぶbump/index.html">
             <img src="img/センサー.gif" alt="猫の視覚" class="tile-image">
-            <div class="tile-title">26</div>
-            <div class="tile-desc">テキスト</div>
+            <div class="tile-title"></div>
         </div>
 
         <!-- <div class="tile type-27" 
@@ -329,8 +354,7 @@
             data-link-type="external"
             data-url="https://yamato-sho.github.io/cat-world_-Graduation-work/rule/index.html">
             <img src="img/ねこルール.gif" alt="猫の視覚" class="tile-image">
-            <div class="tile-title">28</div>
-            <div class="tile-desc">テキスト</div>
+            <div class="tile-title"></div>
         </div>
 
         <!-- <div class="tile type-29" 
@@ -345,8 +369,7 @@
              data-link-type="external"
             data-url="https://yamato-sho.github.io/cat-world_-Graduation-work/きdanger/index.html">
             <img src="img/色.gif" alt="猫の視覚" class="tile-image">
-            <div class="tile-title">30</div>
-            <div class="tile-desc">テキスト</div>
+            <div class="tile-title"></div>
         </div>
         </div>
 

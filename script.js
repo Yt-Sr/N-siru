@@ -104,6 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     
 
+
     // スクロールでミニマップを更新
     window.addEventListener('scroll', updateMinimap);
    
@@ -127,6 +128,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // タイルをミニマップに描画
         tiles.forEach(tile => {
+        if (tile.classList.contains('type-hidden')) {
+            return; 
+        }
+        
             const dot = document.createElement('div');
             dot.className = 'minimap-dot';
             
@@ -192,8 +197,6 @@ window.addEventListener('load', function() {
 });
 
 
-
-
     // キーボードショートカット（矢印キー＋WASD）
     document.addEventListener('keydown', (e) => {
         const scrollSpeed = 200;
@@ -233,6 +236,8 @@ window.addEventListener('load', function() {
         if (e.target.classList.contains('close-btn')) {
             closeModal();
         }
+        
+        
 
     });
     
