@@ -19,19 +19,17 @@
         }
 
 ruby {
-    /* 縦書きの中でのルビの向きを調整 */
-    text-combine-upright: none; 
-    /* 行間が詰まって重なるのを防ぐ */
-    display: inline-block;
-    line-height: 1;
-    margin: 0 0.2em; /* 隣の文字との重なり防止 */
+    display: inline; /* block要素にならないように固定 */
 }
 
 rt {
-    /* 縦書きの際、ルビを右側に正しく配置 */
-    writing-mode: vertical-rl;
-    font-size: 0.5em; /* ルビを少し小さくして収まりを良くする */
-    line-height: 1.2;
+    /* 縦書きの右側に配置を固定 */
+    ruby-position: over; 
+    /* 文字サイズを小さくして干渉を防ぐ */
+    font-size: 0.5em;
+    /* 余計な余白を消す */
+    line-height: 1;
+    margin: 0;
 }
 
 
