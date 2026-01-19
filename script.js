@@ -35,14 +35,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
             //ウィンドウのオープン
             if (info.linkType === 'external' && info.url) {
-                e.preventDefault(); // ブラウザのデフォルト動作を停止
-                window.location.href = info.url; // 現在のタブのURLを書き換える
-                return; // 処理を終了
+                e.preventDefault(); 
+                window.location.href = info.url; 
+                return; 
                 } 
                 
                 
             else if (info.linkType === 'modal') {
-                // 1. タイル内に埋め込まれたカスタムモーダルを探す
+
                 const customModal = tile.querySelector('.modal');
                 
                 if (customModal) {
