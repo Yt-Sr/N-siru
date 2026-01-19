@@ -18,18 +18,23 @@
 
         }
 
+/* 親文字のエリアを基準にする */
 ruby {
-    display: inline; /* block要素にならないように固定 */
+    display: inline-block;
+    position: relative; /* ルビの位置の基準点にする */
+    line-height: 1;
 }
 
+/* ルビの文字本体を「浮かせ」て配置 */
 rt {
-    /* 縦書きの右側に配置を固定 */
-    ruby-position: over; 
-    /* 文字サイズを小さくして干渉を防ぐ */
+    position: absolute;
+    top: 0;
+    left: 1.2em; /* 文字の「右側」へ強制的に移動（数値で微調整可） */
+    width: 1em;  /* ルビの幅を固定 */
     font-size: 0.5em;
-    /* 余計な余白を消す */
     line-height: 1;
-    margin: 0;
+    white-space: nowrap; /* 改行させない */
+    display: block;
 }
 
 
