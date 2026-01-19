@@ -36,6 +36,7 @@ rt {
     white-space: nowrap; /* 改行させない */
     display: block;
 }
+ruby { ruby-position: under; }
 
 
 
