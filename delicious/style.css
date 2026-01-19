@@ -19,20 +19,28 @@
         }
 
 ruby {
-    /* ルビが「1行」を占領するのを防ぎ、文字にピタッと吸着させる */
     display: inline-flex;
-    flex-direction: column; /* 縦書きでの配置を安定させる */
-    line-height: 1;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    line-height: 1; /* 行間の干渉をリセット */
+    vertical-align: top;
 }
 
 rt {
-    /* 左側に配置（under） */
-    ruby-position: under;
-    /* 本文の文字を押し下げないようにサイズを固定 */
+    /* 本文のレイアウトに干渉させない設定 */
+    position: absolute;
+    left: -1.2em; /* 文字の「左側」に強制配置 */
+    top: 0;
+    
+    /* 縦書きを維持 */
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    
+    /* 見た目の調整 */
     font-size: 0.5em;
     line-height: 1;
-    /* もしこれでも下に隙間ができるなら、高さを0にする（荒業） */
-    height: 0;
+    white-space: nowrap;
 }
 
 
