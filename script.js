@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     const canvas = document.getElementById('canvas');
-    // HTMLからすべてのタイル取得
+    // HTMLからすべてのタイル要素を取得
     const tiles = document.querySelectorAll('.tile',);
     
+
     const getTileInfo = (element) => {
 
         const descElement = element.querySelector('.tile-desc');
@@ -26,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     
-
+    // 各タイルにクリックイベントを設定
     tiles.forEach(tile => {
         tile.addEventListener('click', (e) => {
             e.stopPropagation();
@@ -34,18 +35,16 @@ document.addEventListener('DOMContentLoaded', () => {
             
             if (info.linkType === 'external' && info.url) {
                 window.open(info.url, '_blank');
-    //         if (info.linkType === 'external' && info.url) {
-    // window.location.href = info.url;//}
                 
             } else if (info.linkType === 'modal') {
+                // 1. タイル内に埋め込まれたカスタムモーダルを探す
                 const customModal = tile.querySelector('.modal');
                 
                 if (customModal) {
-
                     document.body.appendChild(customModal);
                     
                     customModal.classList.add('active');
-                    document.body.style.overflow = 'hidden'; // スクロール停止
+                    document.body.style.overflow = 'hidden'; 
 
 
                     const modalWrapper = tile.querySelector('.modal-content-hidden');
@@ -77,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
         
         modal.classList.add('active');
-        document.body.style.overflow = 'hidden'; // スクロール停止
+        document.body.style.overflow = 'hidden'; 
     }
 
 
@@ -94,11 +93,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (originalWrapper) {
                     originalWrapper.appendChild(modal);
                 }
-                delete modal.dataset.originalParentId; 
+                delete modal.dataset.originalParentId; // データの削除
             }
         });
         
-
+        // 背景のスクロールを再開
         document.body.style.overflow = ''; 
     };
     
@@ -107,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', updateMinimap);
    
-
+    // ミニマップ更新 
     function updateMinimap() {
         const minimapContent = document.getElementById('minimapContent');
         minimapContent.innerHTML = '<div class="minimap-viewport" id="minimapViewport"></div>';
@@ -121,11 +120,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const minimapWidth = minimap.offsetWidth;
         const minimapHeight = minimap.offsetHeight;
 
-        // 縮尺
+        // 縮尺を
         const scaleX = minimapWidth / canvasWidth;
         const scaleY = minimapHeight / canvasHeight;
 
-        // タイルをミニマップに反映
+        // タイルをミニマップに
         tiles.forEach(tile => {
         if (tile.classList.contains('type-hidden')) {
             return; 
@@ -134,17 +133,17 @@ document.addEventListener('DOMContentLoaded', () => {
             const dot = document.createElement('div');
             dot.className = 'minimap-dot';
             
-            // タイル位置取得
+            // タイルの位置取得
             const tileX = tile.offsetLeft;
             const tileY = tile.offsetTop;
             const tileWidth = tile.offsetWidth;
             const tileHeight = tile.offsetHeight;
 
-            // タイルの中心位置計算
+            // タイルの中心位置
             const centerX = tileX + (tileWidth / 2);
             const centerY = tileY + (tileHeight / 2);
 
-
+            // ミニマップ上の位置
             dot.style.left = (centerX * scaleX) + 'px';
             dot.style.top = (centerY * scaleY) + 'px';
             minimapContent.appendChild(dot);
@@ -157,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
         viewport.style.width = viewportWidth + 'px';
         viewport.style.height = viewportHeight + 'px';
 
-        // 現在のスクロール位置を取得
+
         const scrollX = window.pageXOffset;
         const scrollY = window.pageYOffset;
 
@@ -173,11 +172,12 @@ document.addEventListener('DOMContentLoaded', () => {
         viewport.style.top = clampedTop + 'px';
     }
 
-    // 検索機能（廃止）
+    // 検索機能(廃止)
     document.querySelector('.search-box')?.addEventListener('input', (e) => {
         const searchTerm = e.target.value.toLowerCase();
         tiles.forEach(tile => {
             const title = tile.querySelector('.tile-title').innerText.toLowerCase();
+
             const descElement = tile.querySelector('.tile-desc');
             const desc = descElement ? descElement.innerText.toLowerCase() : '';
 
@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-
+    // 初期位置を中央
 window.addEventListener('load', function() {
     window.scrollTo(900, 1200); 
 
