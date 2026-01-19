@@ -35,8 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // if (info.linkType === 'external' && info.url) {
             //     window.open(info.url, '_blank');
             if (info.linkType === 'external' && info.url) {
-    window.location.href = info.url;
-}
+    window.location.href = info.url;//}
                 
             } else if (info.linkType === 'modal') {
                 const customModal = tile.querySelector('.modal');
