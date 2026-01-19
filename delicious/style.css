@@ -26,6 +26,9 @@ ruby {
     line-height: 2; /* 行間の干渉をリセット */
     vertical-align: top;
 }
+.rubyposition_under{
+  display: inline-block;
+}
 
 rt {
     /* 本文のレイアウトに干渉させない設定 */
