@@ -23,7 +23,7 @@ ruby {
     flex-direction: column;
     align-items: center;
     position: relative;
-    line-height: 1; /* 行間の干渉をリセット */
+    line-height: 2; /* 行間の干渉をリセット */
     vertical-align: top;
 }
 
