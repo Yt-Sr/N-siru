@@ -130,7 +130,7 @@
             border: 3px solid #000;
             padding: 20px 15px;
             box-shadow: 2px 2px 0px rgba(0,0,0,0.2);
-            font-size: clamp(12px, 1vw, 16px); 
+            font-size: clamp(14px, 1vw, 16px); 
             line-height: 1.8;
             opacity: 0;
             transform: scale(0.8);
@@ -192,6 +192,7 @@
         @media (max-width: 768px) {
             body {
                 padding: 30px;
+              font-size:10px
             }
 
             .panel-row {
