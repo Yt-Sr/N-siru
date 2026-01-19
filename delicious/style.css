@@ -18,25 +18,22 @@
 
         }
 
-/* 親文字のエリアを基準にする */
 ruby {
-    display: inline-block;
-    position: relative; /* ルビの位置の基準点にする */
+    /* ルビが「1行」を占領するのを防ぎ、文字にピタッと吸着させる */
+    display: inline-flex;
+    flex-direction: column; /* 縦書きでの配置を安定させる */
     line-height: 1;
 }
 
-/* ルビの文字本体を「浮かせ」て配置 */
 rt {
-    position: absolute;
-    top: 0;
-    left: 1.2em; /* 文字の「右側」へ強制的に移動（数値で微調整可） */
-    width: 1em;  /* ルビの幅を固定 */
+    /* 左側に配置（under） */
+    ruby-position: under;
+    /* 本文の文字を押し下げないようにサイズを固定 */
     font-size: 0.5em;
     line-height: 1;
-    white-space: nowrap; /* 改行させない */
-    display: block;
+    /* もしこれでも下に隙間ができるなら、高さを0にする（荒業） */
+    height: 0;
 }
-ruby { ruby-position: under; }
 
 
 
