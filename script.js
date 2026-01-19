@@ -32,9 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
         tile.addEventListener('click', (e) => {
             e.stopPropagation();
             const info = getTileInfo(tile);
-            
+
+            //ウィンドウのオープン
             if (info.linkType === 'external' && info.url) {
-                window.open(info.url, '_blank');
+                window.location.assign(info.url);
+                
                 
             } else if (info.linkType === 'modal') {
                 // 1. タイル内に埋め込まれたカスタムモーダルを探す
