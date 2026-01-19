@@ -18,7 +18,16 @@
 
         }
 
-rt { font-size: 0.6em; }
+/* ルビを含めた行間を適切に保つ */
+ruby {
+  line-height: 2.0; /* 標準より広めに設定 */
+}
+
+/* ブラウザごとの表示のズレを抑える */
+rt {
+  font-size: 0.6em; /* ルビを少し小さくする */
+}
+
 
         .manga-container {
             max-width: 1000px;
