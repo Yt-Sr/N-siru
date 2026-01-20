@@ -257,8 +257,6 @@
 
                 /* ボタン */
 
-/* 003 */
-
 .button003{
     margin-top: 50px;
 }
@@ -280,7 +278,7 @@
     
 }
 .button003 a:hover {
-       background: rgb(162, 168, 180);
+    background: rgb(162, 168, 180);
     color: #FFF;
     transform: scale(1.05);
 }
