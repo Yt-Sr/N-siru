@@ -14,7 +14,7 @@
             font-family: 'Hiragino Kaku Gothic Pro', 'Meiryo', sans-serif;
             padding: 60px;
             overflow-x: hidden;
-            margin: 10vw;
+            margin: 4vw;
 
         }
 
@@ -125,10 +125,10 @@
         }
 
         .text-box {
-            margin: 5%;
+            margin: 3%;
             background: white;
             border: 3px solid #000;
-            padding: 20px 15px;
+            padding: 8px;
             box-shadow: 2px 2px 0px rgba(0,0,0,0.2);
             font-size: clamp(12px, 1vw, 16px); 
             line-height: 1.8;
@@ -145,28 +145,28 @@
         .text-box-top-left {
             position: absolute;
             /* top: 20px; */
-            left: 20px;
+            left: 1px;
             max-width: 45%;
         }
 
         .text-box-top-right {
             position: absolute;
             /* top: 20px; */
-            right: 20px;
+            right: 1px;
             max-width: 45%;
         }
 
         .text-box-bottom-left {
             position: absolute;
             bottom: 20px;
-            left: 20px;
+            left: 1px;
             max-width: 45%;
         }
 
         .text-box-bottom-right {
             position: absolute;
             bottom: 20px;
-            right: 10px;
+            right: 1px;
             max-width: 45%;
         }
 
