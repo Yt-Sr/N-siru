@@ -131,13 +131,13 @@ function initializeEventListeners() {
     document.getElementById('saveBtn').addEventListener('click', saveToGallery);
     document.getElementById('resetCanvasBtn').addEventListener('click', () => showConfirmation(
         '⚠️ キャンバスをリセットしますか?',
-        'キャンバスに描いた絵がすべて消えてしまいます。このそうさはもとには戻せません。本当によろしいですか?',
+        'キャンバスに描いた絵がすべて消えてしまいます。この操作はもとには戻せません。本当によろしいですか?',
         resetCanvas
     ));
     document.getElementById('downloadBtn').addEventListener('click', downloadWorksheet);
     document.getElementById('resetAllBtn').addEventListener('click', () => showConfirmation(
         '⚠️ ワークシートをぜんぶリセットしますか?',
-        '名前、すべての質問への回答、およびキャンバスの絵が消えます。このそうさはもとには戻せません。',
+        '名前、すべての質問への回答、およびキャンバスの絵が消えます。この操作はもとには戻せません。',
         resetAll
     ));
     
@@ -147,12 +147,12 @@ function initializeEventListeners() {
     document.getElementById('confirmCancel').addEventListener('click', closeConfirmModal);
     document.getElementById('confirmClose').addEventListener('click', closeConfirmModal);
     
-
+    // 入力フィールド - 文字数カウント
     setupCharCounter('surprised', 'surprisedCount');
     setupCharCounter('likedPlace', 'likedPlaceCount');
     setupCharCounter('wish', 'wishCount');
     
-
+    // 入力フィールド - state同期
     syncInputFields();
 }
 
@@ -166,7 +166,7 @@ function setupCharCounter(inputId, counterId) {
     });
 }
 
-
+// 入力フィールドとstate同期
 function syncInputFields() {
     const fields = [
         'worksheetName', 'closest', 'furthest', 'redBall', 'curtain',
@@ -203,7 +203,7 @@ function switchTab(tab) {
     }
 }
 
-
+// 座標取得ヘルパー
 function getCoordinates(e) {
     const rect = state.canvas.getBoundingClientRect();
     const clientX = e.clientX || (e.touches && e.touches[0] ? e.touches[0].clientX : 0);
@@ -221,7 +221,7 @@ function getCoordinates(e) {
     };
 }
 
-
+// 描画開始
 function startDrawing(e) {
     state.isDrawing = true;
     const { x, y } = getCoordinates(e);
@@ -229,7 +229,7 @@ function startDrawing(e) {
     state.ctx.moveTo(x, y);
 }
 
-
+// 描画
 function draw(e) {
     if (!state.isDrawing) return;
     
@@ -239,12 +239,12 @@ function draw(e) {
     state.ctx.stroke();
 }
 
-
+// 描画停止
 function stopDrawing() {
     state.isDrawing = false;
 }
 
-
+// タッチイベント処理
 function handleTouchStart(e) {
     e.preventDefault();
     startDrawing(e);
@@ -265,7 +265,7 @@ function resetCanvas() {
 
 // 全リセット
 function resetAll() {
-
+    // 入力フィールドクリア
     const fields = [
         'worksheetName', 'closest', 'furthest', 'redBall', 'curtain',
         'sunlight', 'owner', 'hidingSpot', 'surprised', 'likedPlace', 'wish'
@@ -279,7 +279,7 @@ function resetAll() {
         }
     });
     
-
+    // 文字数カウンターリセット
     document.getElementById('surprisedCount').textContent = '0';
     document.getElementById('likedPlaceCount').textContent = '0';
     document.getElementById('wishCount').textContent = '0';
@@ -292,7 +292,7 @@ function resetAll() {
     closeConfirmModal();
 }
 
-ワークシートPNG
+// ワークシートPNG生成
 function generateWorksheet() {
     const worksheet = document.createElement('canvas');
     worksheet.width = 1200;
@@ -351,7 +351,7 @@ function generateWorksheet() {
     
     ctx.fillStyle = '#00B1B0';
     ctx.font = 'bold 28px Inter, sans-serif';
-    ctx.fillText('② ねこの世界はどう見える?', 60, yPos + 40);
+    ctx.fillText(' ② ねこの見ている世界はどう見える?', 60, yPos + 40);
     ctx.font = '20px Inter, sans-serif';
     ctx.fillText('(ねこにはどう見える?:色・大きさ・動き など)', 60, yPos + 75);
     
@@ -380,7 +380,7 @@ function generateWorksheet() {
     
     ctx.fillStyle = '#FD7E00';
     ctx.font = 'bold 28px Inter, sans-serif';
-    ctx.fillText('③ ねこの世界を描いてみよう!', 60, yPos + 35);
+    ctx.fillText(' ③ ねこの世界を描いてみよう!', 60, yPos + 35);
     yPos += 60;
     
     ctx.fillStyle = '#FFFFFF';
@@ -401,7 +401,7 @@ function generateWorksheet() {
     
     ctx.fillStyle = '#00B1B0';
     ctx.font = 'bold 28px Inter, sans-serif';
-    ctx.fillText('④ ねこ目線になって気づいたこと', 60, yPos + 40);
+    ctx.fillText('④ ねこの目線になって気づいたこと', 60, yPos + 40);
     ctx.font = '20px Inter, sans-serif';
     
     ctx.fillStyle = '#000';
@@ -446,12 +446,12 @@ function saveToGallery() {
 
 // ワークシートダウンロード
 function downloadWorksheet() {
-    // const worksheet = generateWorksheet();
-    // const link = document.createElement('a');
-    // const filename = `neko-worksheet-${state.answers.worksheetName || 'my-room'}.png`;
-    // link.download = filename;
+    const worksheet = generateWorksheet();
+    const link = document.createElement('a');
+    const filename = `neko-worksheet-${state.answers.worksheetName || 'my-room'}.png`;
+    link.download = filename;
     // link.href = worksheet.toDataURL('image/png');
-    // link.click();
+    link.click();
     
     showModal('ダウンロード完了', 'ワークシートPNGをダウンロードしました。');
 }
