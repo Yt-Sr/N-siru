@@ -22,12 +22,12 @@ const state = {
 
 // カラーパレット定義
 const colors = [
-    { name: 'ちゃいろ (ネコ視点の赤)', value: '#8B4513' },
-    { name: 'きいろ (ネコが得意)', value: '#FFD700' },
-    { name: 'あお (ネコが得意)', value: '#4169E1' },
+    { name: 'ちゃいろ', value: '#8B4513' },
+    { name: 'きいろ ', value: '#FFD700' },
+    { name: 'あお ', value: '#4169E1' },
     { name: 'みどり', value: '#3CB371' },
     { name: 'ピンク', value: '#FF69B4' },
-    { name: 'あか (自由に表現)', value: '#FF4500' },
+    { name: 'あか ', value: '#FF4500' },
     { name: 'グレー', value: '#808080' },
     { name: 'くろ', value: '#000000' }
 ];
@@ -45,11 +45,11 @@ function initializeCanvas() {
     state.canvas = document.getElementById('drawingCanvas');
     state.ctx = state.canvas.getContext('2d');
     
-    // 内部解像度設定
+
     state.canvas.width = 700;
     state.canvas.height = 500;
     
-    // コンテキスト設定
+
     state.ctx.lineCap = 'round';
     state.ctx.lineJoin = 'round';
     state.ctx.lineWidth = 6;
@@ -95,7 +95,7 @@ function updateColorPalette() {
     });
 }
 
-// RGB to HEX変換ヘルパー
+
 function rgbToHex(color) {
     if (color.startsWith('#')) return color;
     
@@ -110,7 +110,7 @@ function rgbToHex(color) {
     return hex;
 }
 
-// イベントリスナー初期化
+
 function initializeEventListeners() {
     // タブ切り替え
     document.getElementById('worksheetTab').addEventListener('click', () => switchTab('worksheet'));
@@ -453,7 +453,7 @@ function downloadWorksheet() {
     // link.href = worksheet.toDataURL('image/png');
     link.click();
     
-    showModal('ダウンロード完了', 'ワークシートPNGをダウンロードしました。');
+    showModal('ダウンロード完了', 'ワークシートPNGをダウンロードしました。（ダミーテキストです）');
 }
 
 // ギャラリー表示更新
