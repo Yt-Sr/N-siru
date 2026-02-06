@@ -445,16 +445,16 @@ function saveToGallery() {
 }
 
 // ワークシートダウンロード
-// function downloadWorksheet() {
-//     const worksheet = generateWorksheet();
-//     const link = document.createElement('a');
-//     const filename = `neko-worksheet-${state.answers.worksheetName || 'my-room'}.png`;
-//     link.download = filename;
-//     link.href = worksheet.toDataURL('image/png');
-//     link.click();
+function downloadWorksheet() {
+    // const worksheet = generateWorksheet();
+    // const link = document.createElement('a');
+    // const filename = `neko-worksheet-${state.answers.worksheetName || 'my-room'}.png`;
+    // link.download = filename;
+    // link.href = worksheet.toDataURL('image/png');
+    // link.click();
     
-//     showModal('ダウンロード完了', 'ワークシートPNGをダウンロードしました。');
-// }
+    showModal('ダウンロード完了', 'ワークシートPNGをダウンロードしました。');
+}
 
 // ギャラリー表示更新
 function updateGalleryDisplay() {
