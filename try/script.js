@@ -292,28 +292,28 @@ function resetAll() {
     closeConfirmModal();
 }
 
-// ワークシートPNG
-// function generateWorksheet() {
-//     const worksheet = document.createElement('canvas');
-//     worksheet.width = 1200;
-//     worksheet.height = 1600;
-//     const ctx = worksheet.getContext('2d');
+ワークシートPNG
+function generateWorksheet() {
+    const worksheet = document.createElement('canvas');
+    worksheet.width = 1200;
+    worksheet.height = 1600;
+    const ctx = worksheet.getContext('2d');
     
     // 背景
     ctx.fillStyle = '#FFFFFF';
     ctx.fillRect(0, 0, worksheet.width, worksheet.height);
     
     // タイトル
-    // ctx.fillStyle = '#FD7E00';
-    // ctx.font = 'bold 52px Inter, sans-serif';
-    // ctx.textAlign = 'center';
-    // ctx.fillText('デジタルワークシート', worksheet.width / 2, 70);
+    ctx.fillStyle = '#FD7E00';
+    ctx.font = 'bold 52px Inter, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText('デジタルワークシート', worksheet.width / 2, 70);
     
-    // ctx.fillStyle = '#000';
-    // ctx.font = '32px Inter, sans-serif';
-    // ctx.textAlign = 'left';
+    ctx.fillStyle = '#000';
+    ctx.font = '32px Inter, sans-serif';
+    ctx.textAlign = 'left';
     
-    // let yPos = 140;
+    let yPos = 140;
     
     // 名前
     const displayName = state.answers.worksheetName || 'なまえなし';
@@ -329,9 +329,9 @@ function resetAll() {
     
     ctx.fillStyle = '#FD7E00';
     ctx.font = 'bold 28px Inter, sans-serif';
-    ctx.fillText(' ① ネコになりきってみよう!', 60, yPos + 40);
+    ctx.fillText(' ① ねこになりきってみよう!', 60, yPos + 40);
     ctx.font = '22px Inter, sans-serif';
-    ctx.fillText('ネコは、私たちよりずっと低い場所から世界を見ています。', 60, yPos + 75);
+    ctx.fillText('ねこは、私たちよりずっと低い場所から世界を見ています。', 60, yPos + 75);
     
     ctx.fillStyle = '#000';
     ctx.font = '20px Inter, sans-serif';
